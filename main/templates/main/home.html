@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<div id="content", name="content", class ="main">
+    <div class="row justify-content-center">
+      <div class="col-8">
+        <h1 class="mt-2">Home Page</h1>
+        <hr class="mt-0 mb-4">
+<div/>
+
+{% if user.is_authenticated %}
+<p>You can go the the <a href="/create">create </a> section to generete more custom tasks lists or <a href="/view">view</a> to operate on the existing lists.
+{% else %}
+<p>Please <a href="/register">register</a> or <a href="/login">login</a> to create and control your tasks. </p>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "main/base.html" %}
+
+{% block title %}
+View
+{% endblock %}
+
+{% block content %}
+  <div id="content", name="content", class ="main">
+    <div class="row justify-content-center">
+      <div class="col-8">
+        <h1 class="mt-2">View task pages</h1>
+        <hr class="mt-0 mb-4">
+  <div/>
+  {% for td in user.todolist.all %}
+    <p><a href="/{{td.id}}">{{td.name}}</a></p>
+  {% endfor %}
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'main/base.html' %}
+
+{% block title %} Create New List {% endblock %}
+
+
+{% block content %} 
+{% if user.is_authenticated %}
+  <div id="content", name="content", class ="main">
+    <div class="row justify-content-center">
+      <div class="col-8">
+        <h1 class="mt-2">Create new task page</h1>
+        <hr class="mt-0 mb-4">
+  <div/>
+
+   <p>Please fill-in the name of your new task page</p>
+<form method="post" action="/create/" class="form-group">
+	{% csrf_token %}
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <button type = "submit", name="save" class="btn btn-success">Create New</button>
+      </div>
+        {{form.name}}
+    </div>
+ </form>
+ {% else %}
+ {% endif %}
+{% endblock %}
+

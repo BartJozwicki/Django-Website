@@ -1,0 +1,29 @@
+{% extends "main/base.html" %}
+
+{% block title %}
+Login Here
+{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div id="content", name="content", class ="main">
+    <div class="row justify-content-center">
+      <div class="col-8">
+        <h1 class="mt-2">Login</h1>
+        <hr class="mt-0 mb-4">
+<div/>
+
+{% if user.is_authenticated %}
+<p> You are already logged in! </p>
+{% else %}
+<form method="POST" class="form-group">
+		{% csrf_token %}
+		{{form|crispy}}
+		<p>Don't have an account? Create one <a href="/register">here</p>
+		<button type="submit" class="btn btn-success"">Login</button>
+	</form>
+{% endif %}
+
+{% endblock %}
