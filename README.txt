@@ -1,4 +1,4 @@
-Django Task Manager is an interactive website that allows you to manage your tasks in an organized and efficient way. It is built using the Django framework and served by Python3 on the backend. The frontend utilizes databases, Bootstrap, and CSS for a sleek and user-friendly interface.
+Django Task Manager is an interactive website that allows you to manage your tasks in an organized and efficient way. It is built using the Django framework and served by Python3 on the backend. The application uses databases to store information and utilises bootstrap, and CSS for a sleek and user-friendly interface.
 
 Getting Started
 To start using Django Task Manager, simply follow these steps:
